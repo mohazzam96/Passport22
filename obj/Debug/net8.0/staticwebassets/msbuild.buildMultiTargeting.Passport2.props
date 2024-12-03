@@ -1,0 +1,3 @@
+﻿<Project>
+  <Import Project="..\build\Passport2.props" />
+</Project>

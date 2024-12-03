@@ -1,0 +1,28 @@
+﻿@{
+    Layout = "_Layout"; // Reference to the layout
+}
+
+<h2>User Details</h2>
+<table class="table">
+    <thead>
+        <tr>
+            <th>ID</th>
+            <th>Full Name</th>
+            <th>Email</th>
+            <th>Phone Number</th>
+            <th>Country</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var user in Model)
+        {
+            <tr>
+                <td>@user.Id</td>
+                <td>@user.FullName</td>
+                <td>@user.Email</td>
+                <td>@user.PhoneNumber</td>
+                <td>@user.Country</td>
+            </tr>
+        }
+    </tbody>
+</table>

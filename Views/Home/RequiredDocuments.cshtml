@@ -1,0 +1,64 @@
+﻿@{
+    ViewData["Title"] = "Required Documents";
+}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@ViewData["Title"]</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="~/css/Rec.css">
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">Residency Office</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="/Home/Index">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/Home/PassportApplication">Passport Applications</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/Home/ResidencyForForeigners">Residency For Foreigners</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Header -->
+    <header class="container text-center my-5">
+        <h2 class="page-title">Required Documents for Residency</h2>
+    </header>
+
+    <!-- Main Content -->
+    <main class="container">
+        <section>
+            <h3 class="mb-4">Required Documents</h3>
+            <ul class="list-group">
+                <li class="list-group-item">Valid Passport - A passport with at least six months of validity remaining.</li>
+                <li class="list-group-item">Valid Visa - A visa corresponding to your current residency status.</li>
+                <li class="list-group-item">Proof of Address - A document such as a utility bill or rental agreement.</li>
+                <li class="list-group-item">Employment Letter - An official letter from your employer (if applicable).</li>
+                <li class="list-group-item">Health Insurance - Proof of valid health insurance coverage.</li>
+            </ul>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="text-center py-3 bg-light mt-5">
+        <p>&copy; 2024 Residency and Passport Office. All rights reserved.</p>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

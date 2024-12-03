@@ -1,0 +1,192 @@
+/* General body styling */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    text-align: center;
+    background-image: url('Img/jerash.jpeg');
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat; 
+    height: 100vh; 
+}
+
+
+h1 {
+    font-size: 32px;
+    color: #fff;
+    background: linear-gradient(to right, #000000, #ffffff, #ff0000, #008000); 
+    padding: 20px;
+    margin: 0;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+}
+
+
+.navbar {
+    background-color: rgba(0, 0, 0, 0.8); 
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 10;
+}
+
+.navbar-brand {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #fff !important;
+}
+
+.navbar-nav .nav-link {
+    font-size: 1rem;
+    color: #fff !important;
+    margin-right: 10px;
+    transition: color 0.3s ease;
+}
+
+    .navbar-nav .nav-link:hover {
+        color: #008000 !important; 
+    }
+
+.navbar-nav .dropdown-menu {
+    background-color: rgba(0, 0, 0, 0.9);
+    border: none;
+}
+
+    .navbar-nav .dropdown-menu .dropdown-item {
+        color: #fff;
+    }
+
+        .navbar-nav .dropdown-menu .dropdown-item:hover {
+            background-color: #495057;
+        }
+
+.navbar-toggler {
+    border-color: rgba(255, 255, 255, 0.5);
+}
+
+.navbar-toggler-icon {
+    background-color: #fff;
+}
+
+
+.search-container {
+    margin-top: 20px;
+    margin-bottom: 30px;
+}
+
+    .search-container form {
+        max-width: 300px; 
+        margin: 0 auto;
+    }
+
+    .search-container input {
+        border-radius: 15px; /* Slightly rounded corners */
+        padding: 8px 12px; /* Smaller padding */
+        border: 1px solid #ddd;
+        width: 75%; /* Reduced width to 75% of original */
+        font-size: 0.9rem; /* Smaller font size */
+    }
+
+    .search-container button {
+        border-radius: 15px; /* Match the input field */
+        padding: 8px 15px; /* Smaller button size */
+        background-color: #008000; /* Green button */
+        color: #fff;
+        border: none;
+        margin-left: 10px;
+        font-size: 0.9rem; /* Smaller font size */
+        transition: background-color 0.3s ease;
+    }
+
+        .search-container button:hover {
+            background-color: #005f00; /* Darker green on hover */
+        }
+
+/* Button container for alignment */
+.button-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: 100px auto 40px; /* Adjusted margin for navbar spacing */
+    max-width: 800px;
+}
+
+/* Button/card styling */
+.btn {
+    width: 300px;
+    margin: 20px;
+    padding: 20px;
+    background: #ffffff;
+    border: 2px solid #008000; /* Green border */
+    border-radius: 12px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+    cursor: pointer;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+    .btn:hover {
+        transform: translateY(-5px);
+        box-shadow: 0px 6px 15px rgba(0, 0, 0, 0.3);
+    }
+
+    /* Image inside the button */
+    .btn img {
+        width: 100%;
+        height: 150px;
+        object-fit: cover;
+        border-radius: 8px;
+    }
+
+/* Button text */
+.btn-text {
+    margin-top: 15px;
+    font-size: 18px;
+    font-weight: bold;
+    color: #000000;
+    text-align: center;
+}
+
+    /* Highlight Arabic text */
+    .btn-text span {
+        color: #ff0000; /* Red for Arabic text */
+    }
+
+/* Footer styling (optional) */
+footer {
+    text-align: center;
+    background-color: rgba(0, 0, 0, 0.8);
+    color: #fff;
+    padding: 20px 0;
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 768px) {
+    .btn {
+        width: 250px; /* Adjust button size on smaller screens */
+        padding: 15px;
+    }
+
+    .btn-text {
+        font-size: 16px;
+    }
+
+    h1 {
+        font-size: 24px;
+    }
+
+    .navbar-nav {
+        text-align: center;
+    }
+
+    .button-container {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .search-container input {
+        width: 100%; /* Full width on smaller screens */
+    }
+}

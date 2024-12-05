@@ -8,44 +8,31 @@
 }
 
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ar">
+ <!-- Set the language to Arabic -->
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Passport Application</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Amiri:wght@400;700&family=Cairo:wght@300;400;600;700&display=swap" rel="stylesheet"> <!-- Link to Arabic fonts -->
+    <link rel="stylesheet" href="~/css/layout.css">
 </head>
-<body>
-    <nav class="navbar navbar-expand-lg navbar-light bg-light">
-        <div class="container">
-            <a class="navbar-brand" href="@Url.Action("Index", "Home")">Passport App</a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav">
-                    <li class="nav-item">
-                        <a class="nav-link" href="@Url.Action("UserDetails", "Home")">User Details</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="@Url.Action("PassportApplications", "Home")">Passport Applications</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="@Url.Action("ResidencyRecords", "Home")">Residency Records</a>
-                    </li>
-                </ul>
-                <ul class="navbar-nav ml-auto">
-                    <partial name="_LoginPartial" />
-                </ul>
-            </div>
-        </div>
-    </nav>
 
-    <div class="container">
+<body>
+
+
+    <!-- Arabic Text Display -->
+    <div class="arabic-text" style="text-align: center; margin-top: 30px; font-family: 'Amiri', serif; font-size: 1.2rem; color: #C8102E;">
+        المملكة الاردنية الهاشمية
+    </div>
+
+    <div class="container mt-4">
         @RenderBody()
     </div>
 
-    <footer class="bg-light text-center py-4 mt-4">
+    <!-- Footer -->
+    <footer class="bg-light text-center py-3 mt-4">
         <p>&copy; 2024 Passport Application. All rights reserved.</p>
     </footer>
 

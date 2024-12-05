@@ -1,9 +1,5 @@
 ﻿@model PassportApplication
 
-@{
-    ViewData["Title"] = "Submit Passport Renewal Application";
-}
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -14,91 +10,64 @@
     <link rel="stylesheet" href="~/css/Rec.css">
 </head>
 <body>
-    <!-- Navbar -->
-    <nav class="navbar navbar-expand-lg navbar-dark">
-        <div class="container-fluid">
-            <a class="navbar-brand" href="#">Passport Office</a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav ms-auto">
-                    <li class="nav-item">
-                        <a class="nav-link" href="/Home/Index">Home</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="/Home/PassportApplication">Passport Applications</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="/Home/ResidencyForForeigners">Residency For Foreigners</a>
-                    </li>
-                </ul>
-            </div>
-        </div>
-    </nav>
 
-    <!-- Header -->
-    <header class="container text-center my-5">
-        <h2 class="page-title">Submit Passport Renewal Application</h2>
-    </header>
+    <div class="container mt-5">
+        <h2 class="text-center">Submit Passport Renewal Application</h2>
 
-    <!-- Main Content -->
-    <main class="container">
-        <form asp-action="Create" method="post" class="row g-3">
+        <form asp-action="CreatePassportApplication" method="post">
             <!-- Full Name -->
-            <div class="col-md-6">
+            <div class="mb-3">
                 <label for="FullName" class="form-label">Full Name</label>
-                <input type="text" class="form-control" id="FullName" name="FullName" value="@Model?.UserDetails.PassportApplications" required>
-                @Html.ValidationMessageFor(model => model.UserDetails.PassportApplications, "", new { @class = "text-danger" })
+                <input type="text" class="form-control" id="FullName" name="FullName" value="@Model.FullName" required>
+                @Html.ValidationMessageFor(model => model.FullName, "", new { @class = "text-danger" })
             </div>
 
             <!-- Passport Number -->
-            <div class="col-md-6">
+            <div class="mb-3">
                 <label for="PassportNumber" class="form-label">Passport Number</label>
-                <input type="text" class="form-control" id="PassportNumber" name="PassportNumber" value="@Model?.PassportNumber" required>
+                <input type="text" class="form-control" id="PassportNumber" name="PassportNumber" value="@Model.PassportNumber" required>
                 @Html.ValidationMessageFor(model => model.PassportNumber, "", new { @class = "text-danger" })
             </div>
 
             <!-- Email -->
-            <div class="col-md-6">
-                <label for="UserDetails.Email" class="form-label">Email Address</label>
-                <input type="email" class="form-control" id="UserDetails.Email" name="UserDetails.Email" value="@Model?.UserDetails?.Email" required>
-                @Html.ValidationMessageFor(model => model.UserDetails.Email, "", new { @class = "text-danger" })
+            <div class="mb-3">
+                <label for="Email" class="form-label">Email Address</label>
+                <input type="email" class="form-control" id="Email" name="Email" value="@Model.Email" required>
+                @Html.ValidationMessageFor(model => model.Email, "", new { @class = "text-danger" })
+            </div>
+
+            <!-- Date of Birth -->
+            <div class="mb-3">
+                <label for="DateOfBirth" class="form-label">Date of Birth</label>
+                <input type="date" class="form-control" id="DateOfBirth" name="DateOfBirth" required>
+                @Html.ValidationMessage("DateOfBirth", "", new { @class = "text-danger" })
             </div>
 
             <!-- Phone Number -->
-            <div class="col-md-6">
-                <label for="UserDetails.PhoneNumber" class="form-label">Phone Number</label>
-                <input type="tel" class="form-control" id="UserDetails.PhoneNumber" name="UserDetails.PhoneNumber" value="@Model?.UserDetails?.PhoneNumber" required>
-                @Html.ValidationMessageFor(model => model.UserDetails.PhoneNumber, "", new { @class = "text-danger" })
+            <div class="mb-3">
+                <label for="PhoneNumber" class="form-label">Phone Number</label>
+                <input type="tel" class="form-control" id="PhoneNumber" name="PhoneNumber" value="@Model.PhoneNumber" required>
+                @Html.ValidationMessage("PhoneNumber", "", new { @class = "text-danger" })
             </div>
 
-            <!-- Country -->
-            <div class="col-md-6">
-                <label for="UserDetails.Country" class="form-label">Country</label>
-                <input type="text" class="form-control" id="UserDetails.Country" name="UserDetails.Country" value="@Model?.UserDetails?.Country" required>
-                @Html.ValidationMessageFor(model => model.UserDetails.Country, "", new { @class = "text-danger" })
-            </div>
-
-            <!-- Date of Application -->
-            <div class="col-md-6">
-                <label for="DateOfApplication" class="form-label">Date of Application</label>
-                <input type="date" class="form-control" id="DateOfApplication" name="DateOfApplication" value="@Model?.DateOfApplication.ToString("yyyy-MM-dd")" required>
-                @Html.ValidationMessageFor(model => model.DateOfApplication, "", new { @class = "text-danger" })
+            <!-- Reason for Renewal -->
+            <div class="mb-3">
+                <label for="Reason" class="form-label">Reason for Renewal</label>
+                <textarea class="form-control" id="Reason" name="Reason" rows="3" required></textarea>
+                @Html.ValidationMessage("Reason", "", new { @class = "text-danger" })
             </div>
 
             <!-- Submit Button -->
-            <div class="col-12">
-                <button type="submit" class="btn btn-primary">Submit Application</button>
-            </div>
-        </form>
-    </main>
+            <button type="submit" class="btn btn-primary">Submit Application</button>
 
-    <!-- Footer -->
-    <footer class="text-center py-3 bg-light mt-5">
-        <p>&copy; 2024 Residency and Passport Office. All rights reserved.</p>
-    </footer>
+            <br /><br />
+
+            <br /><br />
+            <br/><br />
+        </form>
+    </div>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
 </body>
 </html>

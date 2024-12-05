@@ -7,8 +7,19 @@ body {
     background-image: url('Img/jerash.jpeg');
     background-size: cover;
     background-position: center center;
-    background-repeat: no-repeat;
+    background-attachment: fixed; /* Ensures the background is fixed */
     min-height: 100vh;
+    animation: fadeIn 2s ease-in-out; /* Fade-in effect for the body */
+    padding-bottom: 80px; /* Prevent content overlap with fixed footer */
+}
+h1 {
+    font-size: 32px;
+    color: #fff;
+    background: linear-gradient(to right, #000000, #ffffff, #ff0000, #008000);
+    padding: 20px;
+    margin: 0;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+    animation: fadeIn 2s ease-in-out; /* Fade-in animation */
 }
 
 /* Title Styling */
@@ -22,58 +33,61 @@ body {
     border-radius: 8px;
     display: inline-block;
     margin-top: 20px;
+    animation: slideInDown 1.5s ease-in-out; /* Slide-down animation */
 }
 
 /* Navbar Styling */
 .navbar {
     background-color: rgba(0, 0, 0, 0.8);
+    animation: fadeIn 1.5s ease-in-out; /* Fade-in effect for navbar */
 }
 
 .navbar-brand {
     font-size: 1.5rem;
     font-weight: bold;
     color: #fff !important;
+    animation: slideInLeft 1.5s ease-in-out; /* Slide-in animation */
 }
 
 .navbar-nav .nav-link {
     font-size: 1rem;
     color: #fff !important;
     margin-right: 10px;
-    transition: color 0.3s ease;
+    transition: color 0.3s ease, transform 0.3s ease, background-color 0.3s ease;
 }
 
     .navbar-nav .nav-link.active {
         color: #ffcc00 !important;
     }
 
-    .navbar-nav .nav-link:hover {
+    .navbar-nav .nav-link:hover,
+    .navbar-nav .nav-link:focus {
         color: #008000 !important;
+        transform: scale(1.1); /* Slight scale effect on hover */
     }
 
-/* Table Styling */
-.table-custom {
-    background-color: rgba(255, 255, 255, 0.9);
-    border-radius: 8px;
-    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
-    overflow: hidden;
+/* Main Content Styling */
+main {
+    padding: 20px;
 }
 
-    .table-custom thead {
-        background: linear-gradient(to right, #008000, #ff0000, #ffcc00);
-        color: white;
-        font-weight: bold;
-    }
+/* Buttons */
+.btn {
+    display: inline-block;
+    padding: 10px 20px;
+    margin: 15px;
+    font-size: 16px;
+    font-weight: bold;
+    color: white;
+    background-color: #008000;
+    border: none;
+    border-radius: 8px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
 
-    .table-custom tbody tr:nth-child(even) {
-        background-color: #f9f9f9;
-    }
-
-    .table-custom tbody tr:nth-child(odd) {
-        background-color: #ffffff;
-    }
-
-    .table-custom tbody tr:hover {
-        background-color: #e6e6e6;
+    .btn:hover {
+        transform: scale(1.05); /* Slight scaling effect on hover */
+        box-shadow: 0px 6px 15px rgba(0, 0, 0, 0.3);
     }
 
 /* Footer Styling */
@@ -85,9 +99,120 @@ footer {
     bottom: 0;
     width: 100%;
     background: linear-gradient(to right, #008000, #ff0000, #ffcc00);
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5); /* Stronger shadow for better contrast */
+    animation: fadeIn 2s ease-in-out; /* Fade-in effect for footer */
 }
 
     footer p {
         margin: 0;
         font-size: 14px;
     }
+
+/* Dropdown Menu */
+.nav-item.dropdown:hover .dropdown-menu {
+    display: block;
+}
+
+.nav-item.dropdown .dropdown-menu {
+    display: none;
+}
+
+.navbar-nav .dropdown-menu {
+    background-color: rgba(0, 0, 0, 0.9);
+    border: none;
+    animation: fadeIn 0.5s ease;
+}
+
+    .navbar-nav .dropdown-menu a {
+        color: #fff !important;
+        padding: 10px;
+        text-transform: capitalize;
+        transition: color 0.3s ease;
+    }
+
+        .navbar-nav .dropdown-menu a:hover {
+            color: #008000 !important;
+        }
+
+/* Animations */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes fadeInUp {
+    from {
+        transform: translateY(20px);
+        opacity: 0;
+    }
+
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+@keyframes slideInDown {
+    from {
+        transform: translateY(-100%);
+        opacity: 0;
+    }
+
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+@keyframes slideInLeft {
+    from {
+        transform: translateX(-100%);
+        opacity: 0;
+    }
+
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+/* Applying a uniform animation duration for all sections */
+body, .page-title, .navbar, .table-custom, footer {
+    animation-duration: 1.5s; /* Consistent duration for all animations */
+    animation-timing-function: ease-in-out; /* Smooth timing function */
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 768px) {
+    .navbar-nav {
+        text-align: center; /* Center-align navbar items on smaller screens */
+    }
+
+        .navbar-nav .nav-link {
+            font-size: 1.2rem;
+            margin-right: 0;
+            margin-bottom: 10px;
+        }
+
+    .page-title {
+        font-size: 24px; /* Smaller font size for mobile */
+    }
+
+    footer {
+        font-size: 12px; /* Smaller footer text */
+    }
+
+    body {
+        padding-bottom: 100px; /* Adjust footer spacing for smaller screens */
+    }
+}
+
+/* Smooth scrolling for anchor links */
+html {
+    scroll-behavior: smooth;
+}

@@ -1,7 +1,5 @@
-﻿@model List<Residency>
-
-@{
-    ViewData["Title"] = "Residency For Foreigners";
+﻿@{
+    ViewData["Title"] = "Thank You!";
 }
 
 <!DOCTYPE html>
@@ -17,58 +15,40 @@
     <!-- Navbar -->
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
         <div class="container-fluid">
-            <a class="navbar-brand" href="#">Residency Office</a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+            <a class="navbar-brand" href="#">Jordanian Passport Office</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
-            <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
-                <ul class="navbar-nav">
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
                     <li class="nav-item">
-                        <a class="nav-link" href="/Home/Index">Home</a>
+                        <a class="nav-link" href="/">Home</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="/Home/PassportRenewal">Passport Applications</a>
+                        <a class="nav-link" href="/Home/PassportRenewal">Passport Renewal</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link active" href="/Home/ResidencyForForeigners">Residency For Foreigners</a>
+                        <a class="nav-link" href="/Home/ResidencyForForeigners">Residency for Foreigners</a>
                     </li>
-                    <!-- Services Dropdown Menu -->
-                    <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                            Services
-                        </a>
-                        <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                            <li><a class="dropdown-item" href="/Home/Fees">Fees</a></li>
-                            <li><a class="dropdown-item" href="/Home/Guidelines">Guidelines</a></li>
-                            <li><hr class="dropdown-divider"></li>
-                            <li><a class="dropdown-item" href="/Home/Contact">Contact Us</a></li>
-                        </ul>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/Home/Contact">Contact Us</a>
                     </li>
                 </ul>
             </div>
         </div>
     </nav>
 
-    <!-- Header -->
-    <header class="container text-center my-5">
-        <h2 class="page-title">Residency Records</h2>
-    </header>
-
     <!-- Main Content -->
-    <main class="container">
-        <section>
-            <h3 class="mb-4">Residency Options</h3>
-
-            <!-- Button to show required documents -->
-            <a href="/Home/RequiredDocuments" class="btn btn-primary mb-3">View Required Documents</a>
-
-            <!-- Button to submit residency application -->
-            <a href="/Home/CreateResidencyApplication" class="btn btn-success">Submit Residency Application</a>
-        </section>
+    <main class="container text-center my-5">
+        <h2 class="page-title">Thank You for Contacting Us!</h2>
+        <p class="mt-4">
+            Your message has been successfully sent. We will get back to you as soon as possible.
+        </p>
+        <a href="/" class="btn btn-success mt-3">Go Back to Home</a>
     </main>
 
     <!-- Footer -->
-    <footer class="bg-dark text-light py-4 mt-auto">
+    <footer class="bg-dark text-light py-4 mt-5">
         <div class="container text-center">
             <div class="row">
                 <div class="col-md-6">

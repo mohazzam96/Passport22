@@ -1,0 +1,76 @@
+﻿@{
+    ViewData["Title"] = "Fees";
+}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@ViewData["Title"]</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="~/css/site.css" />
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">Jordanian Passport Office</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link active" href="/">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/Home/PassportRenewal">Passport Renewal</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/Home/ResidencyForForeigners">Residency for Foreigners</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/Home/Fees">Fees</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container mt-5">
+        <h2 class="text-center">Jordanian Passport and Residency Fees</h2>
+        <table class="table table-bordered mt-4">
+            <thead>
+                <tr>
+                    <th>Service</th>
+                    <th>Fee</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Passport Renewal</td>
+                    <td>JOD 50</td>
+                </tr>
+                <tr>
+                    <td>Residency Application</td>
+                    <td>JOD 75</td>
+                </tr>
+                <tr>
+                    <td>New Passport Application</td>
+                    <td>JOD 100</td>
+                </tr>
+                <tr>
+                    <td>Residency for Foreigners</td>
+                    <td>JOD 150</td>
+                </tr>
+                <tr>
+                    <td>Lost Passport Replacement</td>
+                    <td>JOD 200</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

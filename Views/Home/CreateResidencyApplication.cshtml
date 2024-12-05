@@ -1,9 +1,5 @@
 ﻿@model ResidencyApplication
 
-@{
-    ViewData["Title"] = "Create Residency Application";
-}
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -17,7 +13,7 @@
 
     <div class="container mt-5">
         <h2 class="text-center">Submit Residency Application</h2>
-        <form asp-action="Create" method="post">
+        <form asp-action="CreateResidencyApplication" method="post">
             <div class="mb-3">
                 <label for="FullName" class="form-label">Full Name</label>
                 <input type="text" class="form-control" id="FullName" name="FullName" value="@Model.FullName" required>

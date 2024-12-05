@@ -6,6 +6,9 @@ namespace Passport2.Models
         [Key]
         public int ApplicationID { get; set; }
         public int UserDetailsId { get; set; }
+        public int PhoneNumber { get; set; }
+        public string? FullName { get; set; }
+        public string? Email { get; set; }
         public string? Status { get; set; }
         public string? PassportNumber { get; set; }
         public DateTime DateOfApplication { get; set; }

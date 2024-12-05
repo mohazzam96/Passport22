@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "lUvl+2POCdgpTNzDpgqyHajNZzI0p+ig/HlQcK450gw=",
+  "Hash": "NOeoQemw18IxNoXfU+9xhV5fUDk64c2/yIEYC3UYzNc=",
   "Source": "Passport2",
   "BasePath": "_content/Passport2",
   "Mode": "Default",
@@ -1250,6 +1250,25 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\css\\Img\\REC.PNG"
+    },
+    {
+      "Identity": "C:\\Users\\usr\\Desktop\\Passport2\\Passport2\\wwwroot\\css\\layout.css",
+      "SourceId": "Passport2",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\usr\\Desktop\\Passport2\\Passport2\\wwwroot\\",
+      "BasePath": "_content/Passport2",
+      "RelativePath": "css/layout.css",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\css\\layout.css"
     },
     {
       "Identity": "C:\\Users\\usr\\Desktop\\Passport2\\Passport2\\wwwroot\\css\\Rec.css",

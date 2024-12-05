@@ -1,0 +1,67 @@
+﻿/* layout.css */
+
+/* General body styling */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    text-align: center;
+    background-color: #f8f9fa; /* Light background to make text readable */
+}
+
+/* Navbar Styling (Using Jordanian Flag Colors) */
+.navbar {
+    background-color: #d30000; /* Red color from the flag */
+    color: #fff;
+}
+
+    .navbar .nav-link {
+        font-size: 1.2rem;
+        color: #fff !important;
+        padding: 10px 20px;
+        text-transform: uppercase;
+        font-weight: bold;
+        transition: color 0.3s ease, transform 0.3s ease;
+    }
+
+        .navbar .nav-link:hover {
+            color: #f8f9fa !important; /* Light color for hover effect */
+            transform: scale(1.1);
+        }
+
+    .navbar .navbar-brand {
+        font-size: 1.5rem;
+        color: #fff;
+        font-weight: bold;
+    }
+
+/* Custom Styles for Arabic Calligraphy */
+.arabic-text {
+    font-family: 'Amiri', 'Cairo', serif; /* Using Amiri and Cairo fonts for Arabic calligraphy */
+    font-size: 3rem; /* Larger text size */
+    color: #007a3d; /* Green color (from Jordanian flag) */
+    text-align: center;
+    font-weight: bold;
+    margin-top: 20px;
+    margin-bottom: 30px;
+}
+
+/* Footer Styling */
+footer {
+    background-color: #007a3d; /* Green color from the flag */
+    color: #fff;
+    padding: 20px 0;
+    margin-top: 20px;
+}
+
+/* Custom styles for Arabic navbar items */
+.navbar .nav-link {
+    text-align: center;
+}
+
+/* Adjustments for responsive navbar */
+@media (max-width: 767px) {
+    .navbar {
+        background-color: #1d1d1b; /* Black when the screen size is small */
+    }
+}

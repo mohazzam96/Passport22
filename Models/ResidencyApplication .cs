@@ -7,14 +7,13 @@ public class ResidencyApplication
     public int ResidencyApplicationID { get; set; }
 
     [Required]
-    [StringLength(100)]
     public string? FullName { get; set; }
+    public string? Status { get; set; }
 
-    [Required]
-    [EmailAddress]
+ 
     public string? Email { get; set; }
-
-    [Required]
-    [StringLength(50)]
+    public DateTime DateOfApplication { get; set; }
+ 
     public string? PassportNumber { get; set; }
+    public UserDetails UserDetails { get; set; } = new UserDetails();
 }
